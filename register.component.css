@@ -1,0 +1,92 @@
+/* *{
+    padding:0;
+    margin:0;
+    font-family:sans-serif;
+    }
+    body{
+    background-color: #03296b;
+    background-image: linear-gradient(180deg, #A9C9FF 0%, #FFBBEC 100%);
+    background-repeat: no-repeat;
+    background-size:100% 800px;
+    background: url("https://images.pexels.com/photos/171292/pexels-photo-171292.jpeg?auto=compress&cs=tinysrgb&w=600");
+    }
+    .registration-form {
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%)
+    }
+    .registration-form h1{
+    font-size:40px;
+    text-align:center;
+    margin:40px 0;
+    }
+    .registration-form p{
+    font-size:20px;
+    margin:15px 0;
+    }
+    .registration-form input{
+    font-size:16px;
+    padding:15px 10px;
+    width:100%;
+    border:0;
+    border-radius:5px;
+    outline: none;
+    }
+    .registration-form button{
+    font-size:20px;
+    font-weight: bold;
+    padding: 10px 15px;
+    margin:20px 0;
+    } */
+
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    h1{
+        padding: 450px;
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+    .registration-form{
+        min-height: 100vh;
+        background: #08071d;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: url("https://images.pexels.com/photos/2074130/pexels-photo-2074130.jpeg?auto=compress&cs=tinysrgb&w=600") no-repeat center center/cover;
+    }
+    .registration-form form{
+        width: 670px;
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+        border-radius: 15px;
+        background: rgba(225,225,225,0.1);
+        backdrop-filter: blur(10px);
+        flex-wrap: wrap;
+    }
+    
+    
+    .registration-form #button{
+        border: none;
+        background: #fff;
+        border-radius: 5px;
+        margin-top: 20px;
+        font-weight: 600;
+        font-size: 20px;
+        color: #333;
+        width: 100px;
+        padding: 0;
+        margin-right: 500px;
+        margin-bottom: 30px;
+        transition: 0.3s;
+    }
+    .registration-form #button:hover{
+        opacity: 0.7;
+    }

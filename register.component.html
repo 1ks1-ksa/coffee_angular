@@ -1,0 +1,49 @@
+<h1 text-align="center">REGISTERATION FORM</h1>
+<div class="registration-form bg bg-light">
+   
+    <form #form="ngForm" (ngSubmit)="form.valid">
+        
+
+        <label>FirstName:</label>
+        <input type="text" name="fname" class="form-control" placeholder="firstname" [(ngModel)]="data.fname" #fname="ngModel" required pattern="^[A-Z][a-z]{4,14}">
+
+        <label class="text-danger" *ngIf="form.submitted&&fname.errors?.['required']">this field is required</label>
+        <label class="text-warning" *ngIf="form.submitted&&fname.errors?.['pattern']">please enter a valid name</label>
+
+
+        <label>LastName:</label>
+        <input type="text" name="lname" class="form-control" placeholder="lastname" [(ngModel)]="data.lname" #lname="ngModel" required pattern="^[A-Z][a-z]{4,14}">
+        <label class="text-danger" *ngIf="form.submitted&&lname.errors?.['required']">this field is required</label>
+        <label class="text-warning" *ngIf="form.submitted&&lname.errors?.['pattern']">please enter a valid name</label>
+
+
+
+        <label>Phone Number:</label>
+        <input type="number" name="number" class="form-control" placeholder="phone" [(ngModel)]="data.number" #number="ngModel" required pattern="[0-9]{10}">
+        <label class="text-danger" *ngIf="form.submitted&&number.errors?.['required']">this field is required</label>
+        <label class="text-danger" *ngIf="form.submitted&&number.errors?.['pattern']">please enter a valid phone number</label>
+
+
+
+        <label>Email-id:</label>
+        <input type="email" name="email" class="form-control" placeholder="email" [(ngModel)]="data.email" #email="ngModel" required pattern="^[a-z]+[0-9_]*[@][g][m][a][i][l][.][c][o][m]">
+        <label class="text-danger" *ngIf="form.submitted&&email.errors?.['required']">this field is required</label>
+        <label class="text-danger" *ngIf="form.submitted&&email.errors?.['pattern']">enter a valid email id</label>
+
+
+
+        <label>Password:</label>
+        <input type="password" name="password" class="form-control" placeholder="password" [(ngModel)]="data.password" #password="ngModel" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!#%*?&]{8,18}$">
+        <label class="text-danger" *ngIf="form.submitted&&password.errors?.['required']">this field is required</label>
+        <label class="text-danger" *ngIf="form.submitted&&password.errors?.['pattern']">enter valid password</label>
+
+   
+
+        <label>Confirm Password:</label>
+        <input type="password" name="confirmpassword" class="form-control" placeholder="confirmpassword" [(ngModel)]="data.confirmpassword" #confirmpassword="ngModel" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!#%*?&]{8,18}$">
+        <label class="text-danger" *ngIf="form.submitted&&confirmpassword.errors?.['required']">this field is required</label>
+        <label class="text-danger" *ngIf="form.submitted&&confirmpassword.errors?.['pattern']">doesn't match</label>
+
+        <button type="submit" text-align="center">Register</button>
+    </form>
+</div>

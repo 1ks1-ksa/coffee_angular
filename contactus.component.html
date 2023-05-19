@@ -1,0 +1,28 @@
+<div class="registration-form bg bg-light">
+    
+    <form #form="ngForm" (ngSubmit)="form.valid">
+        <h1>CONTACT US</h1>
+        
+        <!-- <label>NAME:</label> -->
+        <input type="text" name="name" class="form-control" placeholder="name" [(ngModel)]="data.name" #name="ngModel" required>
+        <label class="text-danger" *ngIf="form.submitted&&name.errors?.['required']">this field is required</label>
+
+
+        <!-- <label>Phone Number:</label> -->
+        <input type="number" name="number" class="form-control" placeholder="phone" [(ngModel)]="data.number" #number="ngModel" required>
+        <label class="text-danger" *ngIf="form.submitted&&number.errors?.['required']">this field is required</label>
+
+
+
+        <!-- <label>Email-id:</label> -->
+        <input type="email" name="email" class="form-control" placeholder="email" [(ngModel)]="data.email" #email="ngModel" required>
+        <label class="text-danger" *ngIf="form.submitted&&email.errors?.['required']">this field is required</label>
+
+
+        <!-- <label>Message:</label> -->
+        <input type="text" name="message" class="form-control" placeholder="type your message here.." [(ngModel)]="data.message" #message="ngModel" required>
+        <label class="text-danger" *ngIf="form.submitted&&message.errors?.['required']">this field is required</label>
+
+        <button type="submit" text-align="center">SEND</button>
+    </form>
+</div>
